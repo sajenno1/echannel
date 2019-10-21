@@ -1,0 +1,101 @@
+/* pages/index/index.wxss */
+.container,swiper,swiper-item {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-item image {
+  width: 100%;
+  height: 100vh;
+  
+}
+
+swiper view {
+  position: relative;
+}
+
+swiper view button {
+  background: rgb(253, 132, 85);
+  font-weight: bold;
+  color: #fff;
+  border: 1px solid #fff;
+  width: 46%;
+  font-size: 40rpx;
+  line-height: 100rpx;
+  border-radius: 60rpx;
+}
+
+.view-1 button {
+  position: absolute;
+  left: 27%;
+  /* top: 36%; */
+}
+
+.view-3 button {
+  position: absolute;
+  left: 27%;
+  bottom: 30rpx;
+}
+
+.view-form {
+  
+  width: 700rpx;
+  height: 850rpx;
+  position: absolute;
+  top: 50rpx;
+  left: 25rpx;
+  font-size: 36rpx;
+  font-weight: 300;
+  color: #fff;
+}
+
+.view-inputs {
+  margin-top: 50rpx;
+  height: 600rpx;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+}
+
+
+.view-inputs view {
+  display: flex;
+  height: 150rpx;
+  align-items: center;
+}
+
+.view-inputs view text {
+  display: inline-block;
+  text-align: right;
+  width: 336rpx;
+  height: 150rpx;
+  border: 1px solod gray;
+  line-height: 150rpx;
+  margin-right: 2%;
+}
+
+
+.view-inputs view input {
+  padding-left: 2%;
+  display: inline-block;
+  width: 343rpx;
+  height: 100rpx;
+  border: 2rpx solid #fff;
+}
+
+picker {
+  display: inline-block;
+  padding-left: 2%;
+  width: 339rpx;
+  height: 100rpx;
+  border: 2rpx solid #fff;
+  position: relative;
+}
+
+#pickerInput {
+  padding-left: 0;
+  border: none;
+}
+
+

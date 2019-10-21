@@ -1,0 +1,67 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  
+  <swiper 
+    vertical="{{ true }}"
+    current="{{ current }}">
+    
+      <swiper-item>
+        <view class="swiper-item view-1">
+          <image src="../../image/{{ imgSrc }}/1.jpg" mode="scaleToFill"></image>
+          <button 
+            open-type="getPhoneNumber" 
+            bindgetphonenumber="getPhoneNumber"
+            style="{{ btnps }}"
+            >申请免费使用   
+          </button>
+        </view>
+      </swiper-item>
+
+      <swiper-item>
+        <view class="swiper-item view-2">
+          <image src="../../image/{{ imgSrc }}/2.jpg" mode="scaleToFill"></image>
+        </view>
+      </swiper-item>
+
+      <swiper-item id="slide3">
+        <view class="swiper-item view-3">
+          <image src="../../image/{{ imgSrc }}/3.jpg" mode="scaleToFill"></image>
+          <form class="view-form" bindsubmit="onsubmit">
+            <view class="view-inputs">
+              <view>
+                <text>公司名称/个人姓名</text>
+                <input name="username" value="{{ username }}"></input>
+              </view>
+              <block wx:if="{{ hnpFlag }}">
+                <view>
+                  <text>手机号码</text>
+                  <input type="number" maxlength="11" name="phoneNumber" value="{{ phoneNumber }}"></input>
+                </view>
+              </block>
+              <view>
+                <text>多渠道平均日单量</text>
+                <input type="number" name="count" value="{{ count }}"></input>
+              </view>
+
+              <view>
+                <text>所经营的行业类目</text>
+                <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                  <input 
+                    id="pickerInput"
+                    disabled 
+                    placeholder="点击选择类目"   
+                    placeholder-style="color:#f9f9f9"
+                    name="category"
+                    value="{{array[index]}}"></input>
+                  </picker>
+              </view>
+            </view>
+            <button formType="submit">提交登陆信息</button>
+          </form>
+        </view>
+      </swiper-item>
+      
+    
+  </swiper>
+    
+</view>
